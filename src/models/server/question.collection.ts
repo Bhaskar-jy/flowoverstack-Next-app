@@ -61,5 +61,13 @@ export default async function createQuestionCollection() {
       ["title"],
       ["asc"]
     ),
+    databases.createIndex(
+        db,
+        questionCollection,
+        "content",
+        IndexType.Fulltext,
+        ["content"],
+        ["asc"]
+      ),
   ]);
 }
