@@ -43,11 +43,12 @@ function RegisterPage() {
     }
     setIsLoading(() => false);
   };
-  return;
-  <div>
-    {error && <p>{error}</p>}
-    <form onSubmit={handleSubmit}></form>
-  </div>;
+  return (
+    <div>
+      {error && <p>{error}</p>}
+      <form onSubmit={handleSubmit}></form>
+    </div>
+  );
 }
 
 export default RegisterPage;
